@@ -22,7 +22,7 @@ def register():
     """Creates a new user account"""
     
     try:
-        new_user = request.get_json()    
+        new_user = request.get_json()   
         username = new_user['username']
         email = new_user['email']
         password = new_user['password']

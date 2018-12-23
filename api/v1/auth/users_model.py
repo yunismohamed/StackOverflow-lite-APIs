@@ -22,7 +22,7 @@ def add_user(username, email, password):
         'Status': 'Successfully registered',
         'Username': username
     }))
-    
+      
     return response
 
 
