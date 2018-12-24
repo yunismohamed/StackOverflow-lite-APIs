@@ -1,16 +1,11 @@
-"""app initializer """
-
-import os
+"""
+App is initialized here"""
 
 from api import create_app
 
-config_name = os.getenv("APP_SETTINGS")
+CONFIG_TYPE = 'development'
+app = create_app(CONFIG_TYPE)
 
-app = create_app(config_name)
-
-@app.route('/')
-def home():
-    return 'Hello World!'
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True) 
